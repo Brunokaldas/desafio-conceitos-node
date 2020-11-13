@@ -80,7 +80,7 @@ app.delete("/repositories/:id", validateRepositorieId, (request, response) => {
   return response.status(204).send();
 });
 
-app.put("/repositories/:id/like", validateRepositorieId, (request, response) => {
+app.post("/repositories/:id/like", validateRepositorieId, (request, response) => {
   const { id } = request.params;
 
   const count = 1;
